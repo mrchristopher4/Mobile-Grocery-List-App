@@ -29,6 +29,11 @@ img {
     border-radius: 20px;
 }
 
+.imgChangeOnHover {
+    background-image: url("https://media.giphy.com/media/l3fPlHQOHUzYRufm7E/giphy.gif?cid=790b761166ltb8p6suvaajkswv500e3to3ez1w6p32hto5ai&ep=v1_gifs_search&rid=giphy.gif&ct=g");
+
+}
+
 input {
     color: #432000;
     background-color: #DCE1EB;
@@ -44,6 +49,7 @@ input {
 .input-field:hover {
     background-color: white;
     color: red;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 button {
