@@ -25,7 +25,7 @@ img {
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     border-radius: 20px;
 
     
@@ -45,7 +45,7 @@ input {
 
 button {
     color: #FDFDFD;
-    background-color: #AC485A;
+    background-color: blue;
     border: 0;
     padding: 15px;
     border-radius: 8px;
@@ -55,7 +55,7 @@ button {
 }
 
 button:hover {
-    background-color: #432000;
+    background-color: #AC485A;
     cursor: pointer;
 }
 
@@ -78,6 +78,7 @@ ul li {
 }
 
 ul li:hover {
-    background-color: #FFECC7;
+    background-color: #ce7e00;
+    color: white;
     cursor: pointer;
 }
