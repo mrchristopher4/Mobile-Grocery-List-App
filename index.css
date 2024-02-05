@@ -20,16 +20,18 @@ html, body {
     margin: 0px;
 }
 
-.mainImage {
+.mainImage2 {
     width: 150px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
     margin-bottom: 10px;
     border-radius: 20px;
+
+    background-image: url(assets/babyyodacoffee.png);
 }
 
-.mainImage2 {
+.mainImage2:hover {
     background-image: url("https://media.giphy.com/media/l3fPlHQOHUzYRufm7E/giphy.gif?cid=790b761166ltb8p6suvaajkswv500e3to3ez1w6p32hto5ai&ep=v1_gifs_search&rid=giphy.gif&ct=g");
     background-size: cover;
 }
