@@ -42,14 +42,14 @@ input {
     border-radius: 8px;
     font-size: 20px;
     text-align: center;
-    font-family: 'Protest Revolution', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 10px 0;
 }
 
 .input-field:hover {
     background-color: white;
     color: red;
-    font-family: Arial, Helvetica, sans-serif;
+    
 }
 
 button {
@@ -60,7 +60,7 @@ button {
     border-radius: 8px;
     font-size: 20px;
     text-align: center;
-    font-family: 'Protest Revolution', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 button:hover {
