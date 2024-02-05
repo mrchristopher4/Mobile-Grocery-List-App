@@ -43,7 +43,7 @@ input {
 
 .input-field:hover {
     background-color: white;
-    color: black
+    color: red;
 }
 
 button {
