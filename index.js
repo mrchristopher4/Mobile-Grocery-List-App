@@ -7,47 +7,47 @@ const appSettings = {
 
 const app = initializeApp(appSettings)
 const database = getDatabase(app)
-const shoppingListInDB = ref(database, "shoppingList")
+const CoffeeSelectListInDB = ref(database, "CoffeeSelectList")
 
 const inputFieldEl = document.getElementById("input-field")
 const addButtonEl = document.getElementById("add-button")
-const shoppingListEl = document.getElementById("shopping-list")
+const CoffeeSelectListEl = document.getElementById("CoffeeSelect-list")
 
 addButtonEl.addEventListener("click", function() {
     let inputValue = inputFieldEl.value
     
-    push(shoppingListInDB, inputValue)
+    push(CoffeeSelectListInDB, inputValue)
     
     clearInputFieldEl()
 })
 
-onValue(shoppingListInDB, function(snapshot) {
+onValue(CoffeeSelectListInDB, function(snapshot) {
     if (snapshot.exists()) {
         let itemsArray = Object.entries(snapshot.val())
     
-        clearShoppingListEl()
+        clearCoffeeSelectListEl()
         
         for (let i = 0; i < itemsArray.length; i++) {
             let currentItem = itemsArray[i]
             let currentItemID = currentItem[0]
             let currentItemValue = currentItem[1]
             
-            appendItemToShoppingListEl(currentItem)
+            appendItemToCoffeeSelectListEl(currentItem)
         }    
     } else {
-        shoppingListEl.innerHTML = "No items here... yet"
+        CoffeeSelectListEl.innerHTML = "No items here... yet"
     }
 })
 
-function clearShoppingListEl() {
-    shoppingListEl.innerHTML = ""
+function clearCoffeeSelectListEl() {
+    CoffeeSelectListEl.innerHTML = ""
 }
 
 function clearInputFieldEl() {
     inputFieldEl.value = ""
 }
 
-function appendItemToShoppingListEl(item) {
+function appendItemToCoffeeSelectListEl(item) {
     let itemID = item[0]
     let itemValue = item[1]
     
@@ -56,10 +56,10 @@ function appendItemToShoppingListEl(item) {
     newEl.textContent = itemValue
     
     newEl.addEventListener("click", function() {
-        let exactLocationOfItemInDB = ref(database, `shoppingList/${itemID}`)
+        let exactLocationOfItemInDB = ref(database, `CoffeeSelectList/${itemID}`)
         
         remove(exactLocationOfItemInDB)
     })
     
-    shoppingListEl.append(newEl)
+    CoffeeSelectListEl.append(newEl)
 }
