@@ -41,6 +41,11 @@ input {
     margin: 10px 0;
 }
 
+.input-field:hover {
+    background-color: white;
+    color: black
+}
+
 button {
     color: #FDFDFD;
     background-color: blue;
